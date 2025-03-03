@@ -1,0 +1,312 @@
+/* Estilos generales */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  line-height: 1.6;
+  text-align: justify; /* Texto justificado */
+  overflow-x: hidden;
+
+}
+
+/* Header */
+header {
+  background-color: #000; /* Fondo negro */
+  padding: 0;
+  text-align: center;
+}
+
+/* Contenedor del banner */
+.banner-pagina {
+  width: 100%;
+  overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+/* Imagen del banner */
+.banner-pagina img {
+  width: 100%;
+  height: auto; /* La altura se ajusta automáticamente */
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* Aviso h1 */
+.aviso-h1 {
+  text-align: center;
+  padding: 10px; /* Reducir el padding */
+  background-color: #333; /* Gris oscuro */
+  color: #ffa500; /* Naranja */
+  margin: 0;
+  font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+}
+
+/* Navbar */
+nav {
+  background-color: #333; /* Gris oscuro */
+  padding: 10px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav ul li {
+  margin: 5px 15px;
+  position: relative;
+}
+nav ul li a {
+  color: #fff; /* Texto blanco */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #ffa500; /* Naranja al hacer hover */
+}
+
+/* Submenús */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333; /* Gris oscuro */
+  padding: 10px;
+  z-index: 1;
+}
+nav ul li:hover ul {
+  display: block;
+}
+nav ul li ul li {
+  margin: 5px 0;
+}
+
+/* Main */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  margin: 0 auto; /* Centrar el contenido */
+}
+
+/* Aside laterales */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 300px;
+}
+.div-lateral {
+  width: 100%;
+}
+.div-lateral img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+/* Contenido principal */
+.contenido-principal {
+  flex: 1;
+  margin: 0 20px;
+}
+.cuadro-texto-descripcion {
+  background-color: #444; /* Gris un poco más claro */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: justify; /* Texto justificado */
+}
+.cuadro-texto-descripcion h2 {
+  color: #ffa500; /* Naranja */
+}
+
+.cuadricula {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+  gap: 20px;
+}
+
+.cuadro {
+  background-color: #444; /* Gris un poco más claro */
+  padding: 10px; /* Reducir el padding */
+  border-radius: 8px;
+  text-align: justify; /* Texto justificado */
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el cuadro */
+}
+.cuadro:hover {
+  transform: scale(1.05); /* Efecto de movimiento */
+}
+.cuadro img {
+  width: 100%; /* Ajusta el ancho al 100% del cuadro */
+  height: auto; /* mantiene la proporción de la imagen */
+  border-radius: 8px;
+  object-fit: cover; /* Ajustar la imagen sin distorsión */
+}
+.cuadro .texto h2 {
+  color: #ffa500; /* Naranja */
+  font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+}
+.cuadro .texto p {
+  color: #fff; /* Texto blanco */
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Gris oscuro */
+  padding: 20px;
+  text-align: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.copyright p {
+  margin: 0;
+  color: #fff; /* Texto blanco */
+}
+.copyright a {
+  color: #ffa500; /* Naranja */
+  text-decoration: none;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de WhatsApp */
+.whatsapp img {
+  width: 40px; /* Tamaño fijo */
+  height: 40px; /* Tamaño fijo */
+  border-radius: 50%; /* Hacer el botón redondo */
+  object-fit: contain; /* Ajustar la imagen sin distorsión */
+  transition: transform 0.3s ease;
+}
+.whatsapp img:hover {
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Botón "Volver arriba" */
+.volver-arriba {
+  position: fixed; /* Hace que el botón sea flotante */
+  bottom: 20px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la derecha */
+  background-color: #ffa500; /* Color de fondo naranja */
+  color: #fff; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma circular */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: background-color 0.3s ease; /* Transición suave */
+  display: flex; /* Usa flexbox para centrar contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.volver-arriba img {
+  width: 24px; /* Ancho de la imagen */
+  height: 24px; /* Alto de la imagen */
+  object-fit: contain; /* Ajusta la imagen sin distorsión */
+  border-radius: 50%; /* Hace la imagen redonda */
+}
+.volver-arriba:hover {
+  background-color: #ff8c00; /* Naranja más oscuro al hacer hover */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li ul {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  nav ul li ul li {
+    margin: 5px 0;
+  }
+
+  /* Main */
+  main {
+    flex-direction: column;
+  }
+  .lateral {
+    display: none; /* Ocultar aside en móviles */
+  }
+  .contenido-principal {
+    margin: 0;
+  }
+  .cuadricula {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .whatsapp img,
+  .volver-arriba img {
+    width: 25px; /* Reducir el tamaño del ícono en móviles */
+    height: 25px; /* Reducir el tamaño del ícono en móviles */
+  }
+}
+@media(min-width: 768px){
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 25%;
+  }
+}
+/* Contenedor del video con ancho total y menos altura */
+.video-facebook {
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  padding: 5px; /* Reducimos el padding para que no sea tan alto */
+  background-color: #444; /* Gris oscuro */
+  border-radius: 0px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: block; /* Hace que el contenedor sea un bloque */
+  margin: 20px 0; /* Márgenes arriba y abajo */
+}
+
+/* Enlace al video */
+.video-facebook a {
+  text-decoration: none;
+  color: #ffa500; /* Naranja */
+  font-weight: bold;
+}
+
+.video-facebook a:hover {
+  color: #ff8c00; /* Naranja más oscuro al hacer hover */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .video-facebook {
+    width: 100%; /* El video ocupa el 100% del ancho en pantallas pequeñas */
+    max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
+    padding: 10px; /* Ajustamos el padding en dispositivos móviles */
+  }
+}
