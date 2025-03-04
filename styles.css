@@ -9,7 +9,6 @@ html {
   line-height: 1.6;
   text-align: justify; /* Texto justificado */
   overflow-x: hidden;
-
 }
 
 /* Header */
@@ -96,25 +95,21 @@ main {
 }
 
 /* Aside laterales */
-aside {
+.lateral {
+  width: 300px;
+  background-color: #333; /* Gris oscuro */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 300px;
+  gap: 20px; /* Espacio entre los banners */
 }
-.div-lateral {
-  width: 100%;
-}
-.div-lateral img {
+.lateral img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 20px;
-  max-width: 300px;
 }
+
 /* Contenido principal */
 .contenido-principal {
   flex: 1;
@@ -200,7 +195,7 @@ footer {
 }
 
 /* Botón "Volver arriba" */
-.volver-arriba {
+#volver-arriba {
   position: fixed; /* Hace que el botón sea flotante */
   bottom: 20px; /* Distancia desde la parte inferior */
   right: 20px; /* Distancia desde la derecha */
@@ -219,14 +214,27 @@ footer {
   justify-content: center; /* Centra horizontalmente */
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
-.volver-arriba img {
+#volver-arriba img {
   width: 24px; /* Ancho de la imagen */
   height: 24px; /* Alto de la imagen */
   object-fit: contain; /* Ajusta la imagen sin distorsión */
   border-radius: 50%; /* Hace la imagen redonda */
 }
-.volver-arriba:hover {
+#volver-arriba:hover {
   background-color: #ff8c00; /* Naranja más oscuro al hacer hover */
+}
+
+.banner-lateral {
+  /* background-color: #ff8c00; */
+  display: block;
+}
+.contenedor-aside {
+  /* background-color: red; */
+  margin-top: 29%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Media queries para dispositivos móviles */
@@ -265,18 +273,9 @@ footer {
     gap: 10px;
   }
   .whatsapp img,
-  .volver-arriba img {
+  #volver-arriba img {
     width: 25px; /* Reducir el tamaño del ícono en móviles */
     height: 25px; /* Reducir el tamaño del ícono en móviles */
-  }
-}
-@media(min-width: 768px){
-  aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 25%;
   }
 }
 /* Contenedor del video con ancho total y menos altura */
