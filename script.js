@@ -81,8 +81,43 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           contenedor.style.marginTop = "26.4%";
         }
-      });
-    }else {
+      })
+      
+    
+    }else if(ruta.endsWith("reparacion-estabilizadores.html")){
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "43%";
+        } else {
+          contenedor.style.marginTop = "17%";
+        }
+      })
+    }else if(ruta.endsWith("instalacion-camaras.html")){
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "43%";
+        } else {
+          contenedor.style.marginTop = "17%";
+        }
+      })
+
+    }else if(ruta.endsWith("configuracion-equipos.html")){
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "40%";
+        } else {
+          contenedor.style.marginTop = "17%";
+        }
+      })
+    }else if(ruta.endsWith("configuracion-redes.html")){
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "37%";
+        } else {
+          contenedor.style.marginTop = "17%";
+        }
+      })
+    } else {
       contenedores.forEach((contenedor) => {
         if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
           contenedor.style.marginTop = "34%";
