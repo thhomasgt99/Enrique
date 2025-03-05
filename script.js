@@ -74,7 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
           contenedor.style.marginTop = "19%";
         }
       });
-    } else {
+    } else if(ruta.endsWith("quienes-somos.html")) {
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "66%";
+        } else {
+          contenedor.style.marginTop = "26.4%";
+        }
+      });
+    }else {
       contenedores.forEach((contenedor) => {
         if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
           contenedor.style.marginTop = "34%";
