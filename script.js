@@ -62,7 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const ruta = window.location.pathname;
 
   function aplicarEstilos() {
-    if (ruta === "/" || ruta.endsWith("index.html") || ruta.endsWith("Enrique")) {
+    const url = window.location.href
+    const partes = url.split("/");
+    const ultimoTramo = partes.pop();
+    console.log(ultimoTramo)
+    if (ruta === "/" || ruta.endsWith("index.html") || ultimoTramo == 'Enrique' ) {
       contenedores.forEach((contenedor) => {
         if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
           contenedor.style.marginTop = "51%";
