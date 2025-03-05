@@ -36,18 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Crear el primer div contenedor para las primeras 3 etiquetas aside
   let contenedorInicio = document.createElement("div");
   contenedorInicio.classList.add("contenedor-aside");
-  
+
   // Crear el segundo div contenedor para las últimas 3 etiquetas aside
   let contenedorFinal = document.createElement("div");
   contenedorFinal.classList.add("contenedor-aside");
 
   // Mover las primeras 3 aside al contenedorInicio
   asides.forEach((aside, index) => {
-      if (index < 3) {
-          contenedorInicio.appendChild(aside);
-      } else {
-          contenedorFinal.appendChild(aside);
-      }
+    if (index < 3) {
+      contenedorInicio.appendChild(aside);
+    } else {
+      contenedorFinal.appendChild(aside);
+    }
   });
 
   // Insertar el contenedorInicio al principio del main
@@ -65,9 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (ruta === "/" || ruta.endsWith("index.html") || ruta.endsWith("Enrique")) {
       contenedores.forEach((contenedor) => {
         if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
-          contenedor.style.marginTop = "51.2%";
+          contenedor.style.marginTop = "51%";
         } else {
           contenedor.style.marginTop = "19%";
+        }
+      });
+    } else {
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "34%";
+        } else {
+          contenedor.style.marginTop = "17%";
         }
       });
     }

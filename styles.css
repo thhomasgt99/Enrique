@@ -336,7 +336,7 @@ footer {
   .contenedor-aside {
     display: flex;
     width: 200px;
-    margin-top: 19%;
+    margin-top: 51%;
   }
   .cuadricula {
     grid-template-columns: 240px 240px 240px;
