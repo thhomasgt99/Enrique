@@ -57,6 +57,26 @@ document.addEventListener("DOMContentLoaded", function () {
   main.appendChild(contenedorFinal);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const contenedores = document.querySelectorAll(".contenedor-aside");
+  const ruta = window.location.pathname;
+
+  function aplicarEstilos() {
+    if (ruta === "/" || ruta.endsWith("index.html")) {
+      contenedores.forEach((contenedor) => {
+        if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
+          contenedor.style.marginTop = "51.2%";
+        } else {
+          contenedor.style.marginTop = "19%";
+        }
+      });
+    }
+  }
+
+  aplicarEstilos(); // Aplicar estilos al cargar la página
+  window.addEventListener("resize", aplicarEstilos); // Reaplicar cuando se redimensione la pantalla
+});
+
 
 
 
