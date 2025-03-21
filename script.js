@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       contenedores.forEach((contenedor) => {
         if (window.innerWidth >= 769 & window.innerWidth <= 1240) {
-          contenedor.style.marginTop = "34%";
+          contenedor.style.marginTop = "51%";
         } else {
           contenedor.style.marginTop = "17%";
         }
